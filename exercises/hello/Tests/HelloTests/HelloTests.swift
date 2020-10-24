@@ -13,8 +13,8 @@ final class HelloTests: XCTestCase {
       return
     }
 
-    let fooBinary = productsDirectory.appendingPathComponent("Hello")
-
+    var fooBinary = productsDirectory.appendingPathComponent("Hello")
+    let x = 1 + "l"
     let process = Process()
     process.executableURL = fooBinary
 

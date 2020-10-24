@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:4.2
 
 import PackageDescription
 import Foundation
@@ -32,7 +32,7 @@ let allTestCases = allProblemsPascalCase.map { "testCase(\($0)Tests.allTests)," 
 let linuxMainText =
 """
 import XCTest
-@testable import xswiftTests
+@testable import nestTestsTests
 
 XCTMain([
 \(allTestCases.joined(separator: "\n"))
@@ -51,33 +51,50 @@ do {
 }
 #endif
 
+//print("Doin' things…")
+
 let packageDependencies: [Package.Dependency] = allProblems.map { .package(path: "./exercises/\($0)/") }
+//print("Package Dependencies:")
+//for dep in packageDependencies { print(dep.name, dep.requirement, dep.url) }
+
 let targetDependencies: [Target.Dependency] = allProblemsPascalCase.map { .byName(name:"\($0)") }
+//print("Target Dependencies:")
+//for target in targetDependencies { print(target) }
+
+//print("Doin' more things…")
 
 let sources  = allProblems.map { "./\($0)/Sources" }
+//print("Sources:")
+//for source in sources { print(source) }
+
 let testSources  = allProblems.map { "./\($0)/Tests" }
+//print("Test sources:")
+//for test in testSources { print(test) }
 
 let package = Package(
-    name: "xswift",
+    name: "nestTests",
     products: [
         .library(
-            name: "xswift",
-            targets: ["xswift"]
+            name: "nestTests",
+            targets: ["nestTests"]
             )
     ],
     dependencies: packageDependencies,
     targets: [
         .target(
-            name: "xswift",
+            name: "nestTests",
             dependencies: targetDependencies,
             path: "./exercises",
             sources: sources
             ),
         .testTarget(
-            name: "xswiftTests",
-            dependencies: ["xswift"],
+            name: "nestTestsTests",
+            dependencies: ["nestTests"],
             path: "./exercises",
             sources: testSources
             ),
         ]
     )
+
+print("Package info:")
+print(package)

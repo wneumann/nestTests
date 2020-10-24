@@ -27,6 +27,16 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": ["toodles"]
+    },
+    {
+      "slug": "yo-test",
+      "uuid": "0a1ae84a-1d89-453a-8b97-303181d7874d",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "greeting"
+      ]
     }
   ]
 }
