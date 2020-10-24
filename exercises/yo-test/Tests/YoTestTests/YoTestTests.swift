@@ -24,6 +24,8 @@ final class YoTestTests: XCTestCase {
   }
 
     static var allTests = [
-        ("testExample", testExample),
+      ("testExample", testExample),
+      ("testYo", testYo),
+      ("testYoName", testYoName),
     ]
 }
