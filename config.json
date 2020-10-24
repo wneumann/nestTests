@@ -1,0 +1,32 @@
+{
+  "language": "Swift",
+  "active": true,
+  "blurb": "Swift is a modern open-source language with the aim of making programming simple things easy, and difficult things possible while still being fast and safe by design. Swift can run in scripting mode in the included REPL or it can be compiled with full support for C and Objective-C interoperability.",
+  "exercises": [
+    {
+      "slug": "hello",
+      "uuid": "63904530-1e13-491a-ab17-aee66d619fd8",
+      "core": false,
+      "auto_approve": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": ["hi", "hello"]
+    },
+    {
+      "slug": "couch-surf",
+      "uuid": "ed859c29-fae4-4a32-9074-ac3c3cf324c2",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": ["napping", "fridge_raiding"]
+    },
+    {
+      "slug": "goodbye",
+      "uuid": "53ca7b4a-cdba-4d6d-a564-06e59700a6e4",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": ["toodles"]
+    }
+  ]
+}
